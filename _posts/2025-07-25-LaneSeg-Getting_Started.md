@@ -1,3 +1,8 @@
+---
+layout: post
+title: Getting Started with Lane Segmentation
+---
+
 ## Introduction
 
 * **What is lane segmentation?**
