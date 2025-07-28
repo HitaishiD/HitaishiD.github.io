@@ -74,7 +74,7 @@ The classical method is outlined as follows:
 
 8. **Hough transform:** Hough transform is a technique used to detect straight lines in an image, even in noisy environments. Edge detection pre-processing is recommended. This method requires a threshold: it keeps track of the intersection between curves of every point in the image. If the number of intersections is above the threshold, then it declares it as a line with the parameters of the intersection point.
 <div align="center">
-	<img src="{{ site.baseurl }}/images/lane-segmentation/7-hough-transform.png" alt="Input image">
+	<img src="{{ site.baseurl }}/images/lane-segmentation/7-hough_transform.png" alt="Input image">
 </div>
 
 9. **Left and right lane boundaries:** Since several lines are detected from the Hough transform stage, the leftmost and rightmost lines are chosen as the lane boundaries based on their x-coordinates.
@@ -96,19 +96,6 @@ The classical method is outlined as follows:
 	* **points of failure**
 
 <span style="color: rgb(0, 0, 255);">Add results: images and numbers</span>
-
-## From Rule-Based to Learning-Based Lane Detection
-
-To handle more complex scenarios encountered in real-world driving, I turned to semantic segmentation using deep learning based models. 
-
-* First deeplabv3+ model with kitti dataset
-* explain how it works
-* training setup
-
-## Comparison of Classical and Deep Learning Approaches
-
-* Side-by-side outputs: classical vs deep learning 
-* <span style="color: rgb(0, 0, 255);">Add results: images and numbers</span>
 
 
 ## References
