@@ -2,10 +2,24 @@
 layout: default
 ---
 
-<div class="posts">
+<!--<div class="posts">
   {% for post in site.posts %}
     <article class="post">
       <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
     </article>
   {% endfor %}
-</div>
+</div>-->
+
+
+<div class="posts">
+{% assign grouped = site.posts | group_by: "category" %}
+{% for group in grouped %}
+  <h2>{{ group.name | replace: "-", " " | capitalize }}</h2>
+  <ul>
+    {% for post in group.items %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+</div>-->
+
