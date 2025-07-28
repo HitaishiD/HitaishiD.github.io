@@ -64,7 +64,7 @@ The classical method is outlined as follows:
 ![lanes](/images/lane-segmentation/8-lanes.png)
 
 10. **Lane area filling:** A polygon is formed from the left and right lane boundaries. It is colored to represent the lane area.
-![fill](/images/lane-segmentation/9-fill-lanes.png)
+![fill](/images/lane-segmentation/9-fill-lane.png)
 
 ### Results
 
