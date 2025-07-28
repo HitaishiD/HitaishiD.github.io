@@ -37,7 +37,9 @@ This method does not inherently output a segmentation mask where each pixel is c
 
 The classical method is outlined as follows: 
 1. **Load the RGB image:** The RGB image is loaded with OpenCV using its file path.
-![input](/images/lane-segmentation/0-input-image.png)
+<div align="center">
+  <img src="{{ site.baseurl }}/images/lane-segmentation/0-input-image.png" alt="Input image">
+</div>
 
 2. **Color space conversion:** The image is converted from RGB to HSL (Hue, Saturation, Lightness). The HSL color space helps to better isolate colors like yellow and white which are commonly used for lane marking. 
 ![hsl](/images/lane-segmentation/1-hsl.png)
@@ -54,7 +56,7 @@ The classical method is outlined as follows:
 6. **Canny edge detection:** This step detects edges by finding regions with significant changes in intensity. It can be used after a 5x5 Gaussian filter has been applied on an image. It requires a high and a low threshold value so that edges with intensity higher than the upper threshold are classified as edges with certainty and those below the lower threshold are discarded. Edges lying between the two thresholds are classified as edges or non-edges based on their connectivity.
 ![edges](/images/lane-segmentation/5-detect-edges.png)
 
-7. **Region of Interest (ROI):** The ROI focuses on the area of the image where the lanes most likely appear. This is a step filter and we use an ROI of size ($0.5$ x $height$) x $width$, assuming the camera is mounted on a fixed spot on the car such that the ROI is manually validated. 
+7. **Region of Interest (ROI):** The ROI focuses on the area of the image where the lanes most likely appear. This is a step filter and we use an ROI of size (0.5 x height) x width, assuming the camera is mounted on a fixed spot on the car such that the ROI is manually validated. 
 ![roi](/images/lane-segmentation/6-roi.png)
 
 8. **Hough transform:** Hough transform is a technique used to detect straight lines in an image, even in noisy environments. Edge detection pre-processing is recommended. This method requires a threshold: it keeps track of the intersection between curves of every point in the image. If the number of intersections is above the threshold, then it declares it as a line with the parameters of the intersection point.
