@@ -37,34 +37,34 @@ This method does not inherently output a segmentation mask where each pixel is c
 
 The classical method is outlined as follows: 
 1. **Load the RGB image:** The RGB image is loaded with OpenCV using its file path.
-![input](/images/lane-segmentation/0-input-image.jpg)
+![input](/images/lane-segmentation/0-input-image.png)
 
 2. **Color space conversion:** The image is converted from RGB to HSL (Hue, Saturation, Lightness). The HSL color space helps to better isolate colors like yellow and white which are commonly used for lane marking. 
-![hsl](/images/lane-segmentation/1-hsl.jpg)
+![hsl](/images/lane-segmentation/1-hsl.png)
 
 3. **Masks application:** The range of yellow and white colors is chosen and masks are created for these pixels. These masks are combined and applied to the original image. This helps to filter out irrelevant colors from the image such as road surface, sky, and to focus on the lane area while reducing distractions. It retains spatial information while emphasizing on the lanes.
-![mask](/images/lane-segmentation/2-mask.jpg)
+![mask](/images/lane-segmentation/2-mask.png)
 
 4. **Grayscale conversion:** Image processing techniques such as edge detection are easier and more effective on grayscale images. This is because it simplifies the calculation of gradients and intensity changes. Therefore, the processing pipeline consists of this step of converting masked images to grayscale.
-![gray](/images/lane-segmentation/3-grayscale.jpg)
+![gray](/images/lane-segmentation/3-grayscale.png)
 
 5. **Gaussian blur:** Gaussian blur is a linear filter which helps to smooth the image, by reducing noise and small details that could result in superfluous edges detected further on. This results in the removal of low intensity edges in road images. A Gaussian filter of size 5x5 is used. 
-![blur](/images/lane-segmentation/4-gaussian-blur.jpg)
+![blur](/images/lane-segmentation/4-gaussian-blur.png)
 
 6. **Canny edge detection:** This step detects edges by finding regions with significant changes in intensity. It can be used after a 5x5 Gaussian filter has been applied on an image. It requires a high and a low threshold value so that edges with intensity higher than the upper threshold are classified as edges with certainty and those below the lower threshold are discarded. Edges lying between the two thresholds are classified as edges or non-edges based on their connectivity.
-![edges](/images/lane-segmentation/5-detect-edges.jpg)
+![edges](/images/lane-segmentation/5-detect-edges.png)
 
 7. **Region of Interest (ROI):** The ROI focuses on the area of the image where the lanes most likely appear. This is a step filter and we use an ROI of size ($0.5$ x $height$) x $width$, assuming the camera is mounted on a fixed spot on the car such that the ROI is manually validated. 
-![roi](/images/lane-segmentation/6-roi.jpg)
+![roi](/images/lane-segmentation/6-roi.png)
 
 8. **Hough transform:** Hough transform is a technique used to detect straight lines in an image, even in noisy environments. Edge detection pre-processing is recommended. This method requires a threshold: it keeps track of the intersection between curves of every point in the image. If the number of intersections is above the threshold, then it declares it as a line with the parameters of the intersection point.
-![hough](/images/lane-segmentation/7-hough-transform.jpg)
+![hough](/images/lane-segmentation/7-hough-transform.png)
 
 9. **Left and right lane boundaries:** Since several lines are detected from the Hough transform stage, the leftmost and rightmost lines are chosen as the lane boundaries based on their x-coordinates.
-![lanes](/images/lane-segmentation/8-lanes.jpg)
+![lanes](/images/lane-segmentation/8-lanes.png)
 
 10. **Lane area filling:** A polygon is formed from the left and right lane boundaries. It is colored to represent the lane area.
-![fill](/images/lane-segmentation/9-fill-lanes.jpg)
+![fill](/images/lane-segmentation/9-fill-lanes.png)
 
 ### Results
 
@@ -89,8 +89,12 @@ To handle more complex scenarios encountered in real-world driving, I turned to 
 * Side-by-side outputs: classical vs deep learning 
 * <span style="color: rgb(0, 0, 255);">Add results: images and numbers</span>
 
+
+## References
+
 [1] W. Chen, W. Wang, K. Wang, Z. Li, H. Li, and S. Liu, “Lane departure warning systems and lane line detection methods based on image processing and semantic segmentation: A review,” Journal of Traffic and Transportation Engineering (English Edition), vol. 7, no. 6, pp. 748–774, Dec. 2020, doi: https://doi.org/10.1016/j.jtte.2020.10.002.
-[2] N. Lakhani, R. Karande, and V. Ramakrishnan, “LANE DETECTION USING IMAGE PROCESSING IN PYTHON.” Available: https://www.irjet.net/archives/V9/i4/IRJET-V9I4148.pdf
+
+[2] N. Lakhani, R. Karande, and V. Ramakrishnan, “LANE DETECTION USING IMAGE PROCESSING IN PYTHON.” Available: https://www.irjet.net/archives/V9/i4/IRJET-V9I4148.pdf.
 ‌
 ‌
 
