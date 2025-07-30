@@ -93,14 +93,10 @@ The validation loss is higher than the training loss but both decrease steadily 
 
 ## Results
 
-
-* First deeplabv3+ model with kitti dataset
-* explain how it works
-* training setup
+The mean IoU for the lane class on the test set is 0.870 for the deep-learning based model. Overall, the modern method demonstrates good performance. It achieves high accuracy and shows significant
+potential in diverse conditions. The lane area is consistently segmented and classified correctly. However, the boundaries between classes present in the predicted segmentation masks are not as sharp as the true masks.
 
 ## Comparison of Classical and Deep Learning Approaches
-
-
 
 <figure style="text-align: center; margin-bottom: 30px;">
   <img src="{{ site.baseurl }}/images/lane-segmentation/comparison_input.png" alt="Input image" style="max-width: 100%; height: auto;">
@@ -122,12 +118,18 @@ The validation loss is higher than the training loss but both decrease steadily 
   <figcaption style="margin-top: 8px; font-style: italic;">Ground Truth Mask</figcaption>
 </figure>
 
+The modern, deep-learning based method achieves better performance compared to the classical image processing pipeline previously explored. It is capable of handling occlusions, complex road conditions and diverse road layouts. This is an area where the classical method struggles. It has limited generalization capabilities. 
 
+To improve the performance of the classical method, further fine-tuning of parameters could be wxplored,for example, the filter size of the Gaussian blur, the coordinates of the region of interest, the upper and lower bounds for Canny Edge detection and the threshold for the Hough Line transform. For the modern method, increasing training epochs and optimizing hyperparameters may yield more precise segmentation with clearer boundaries, provided additional computational resources are available. 
 
-* Side-by-side outputs: classical vs deep learning 
-* <span style="color: rgb(0, 0, 255);">Add results: images and numbers</span>
+However, the limitations of the dataset used must be considered. The KITTI dataset might contain biases. Since it was collected from roads in Karlsruhe, Germany, it inherently contains geographical bias in terms of the weather conditions experienced only in Germany, and the road layouts there. Furthermore, biases might be introduced because of pictures collected in urban and suburban environments, clear weather, and good lighting. Sensor characteristics from the cameras used might also lead to biases. Besides, it is a relatively small dataset, containing only 200 images. To improve generalization, the model could be further trained on alternative datasets, such as A2D2, or a combination of multiple datasets. The use of larger datasets might improve the model performance.
+
+## Conclusion
+
+In practical applications, while the modern approach is more accurate, choosing between classical and modern methods depends on several factors. The classical approach is quicker to implement and more cost-effective, while the modern method requires extensive computational resources and training time. However, its superior accuracy and optimized inference speed make it a compelling choice for high-performance lane segmentation. Ultimately, the best approach depends on the use case while balancing accuracy, cost and computation power. This balance is crucial for developing deployable lane segmentation technologies that contribute to safer and more efficient intelligent transport systems.
 
 ## References
+
 [1] L.-C. Chen, Y. Zhu, G. Papandreou, F. Schroff, and H. Adam, “Encoder-decoder with atrous separable convolution for semantic image segmentation,” arXiv, 2018.
 
 [2] “Deeplabv3 — pytorch.org,” https://pytorch.org/hub/pytorch vision deeplabv3 resnet101/.
