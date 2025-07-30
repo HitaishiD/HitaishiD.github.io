@@ -34,28 +34,32 @@ ID (or label). However, only 13 of the predominant classes are used in this proj
 ’road’ class, to facilitate computations. The color map used is given below. It must be noted that class 0
 corresponds to background or unlabeled regions.
 
-```
+#### Color Map Dictionary
+
+```python
 color_map = {
-(128, 64, 128): 1, # Road
-(244,35,232): 2, # Sidewalk
-(70, 70, 70): 3, # Building
-(102,102,156): 4, # Wall
-(190, 153, 153): 5, # Fence
-(107, 142, 35): 6, # Vegetation
-(152,251,125): 7, # Terrain
-(70, 130, 180): 8, # Sky
-(220, 20, 60): 9, # Person
-(0, 0, 142): 10, # Car
-(119, 11, 32): 11, # Bicycle
-(0, 0, 230): 12, # Motorcycle
-(0,0,0): 0, # Background
+    (128, 64, 128): 1,  # Road
+    (244, 35, 232): 2,  # Sidewalk
+    (70, 70, 70): 3,    # Building
+    (102, 102, 156): 4, # Wall
+    (190, 153, 153): 5, # Fence
+    (107, 142, 35): 6,  # Vegetation
+    (152, 251, 125): 7, # Terrain
+    (70, 130, 180): 8,  # Sky
+    (220, 20, 60): 9,   # Person
+    (0, 0, 142): 10,    # Car
+    (119, 11, 32): 11,  # Bicycle
+    (0, 0, 230): 12,    # Motorcycle
+    (0, 0, 0): 0,       # Background
 }
 ```
 
 ## Evaluation Metric
 The metric used to evaluate model performance is Intersection over Union (IoU). IoU, also known as the Jaccard Index, is a common evaluation metric used for tasks such as segmentation, object detection and tracking. It is calculated using the equation below: 
 
-$$IoU = \frac{Intersection\,of\,Predicted\,and\,Ground\,Truth\,Pixels}{Union\,of\,Predicted\,and\,Ground\,Truth\,Pixels}$$
+$$
+\text{IoU} = \frac{\text{Intersection of Predicted and Ground Truth Pixels}}{\text{Union of Predicted and Ground Truth Pixels}}
+$$
 
 Since lane detection is the task performed in this project, the IoU is calculated specifically for the lane class. The numerator represents the total number of pixels where the predicted lane class matches the true lane class. The denominator is the sum of all pixels classified as the lane class in both the prediction and ground truth. The IoU metric is computed for each image and the mean IoU (mIoU) across the test set is obtained by averaging these values. It ranges from 0 to 1, with higher values indicating better performance. 
 
@@ -72,6 +76,7 @@ This method does not inherently output a segmentation mask where each pixel is c
 
 
 The classical method is outlined as follows: 
+
 **Load the RGB image:** The RGB image is loaded with OpenCV using its file path.
 <div align="center">
   <img src="{{ site.baseurl }}/images/lane-segmentation/0-input-image.png" alt="Input image">
