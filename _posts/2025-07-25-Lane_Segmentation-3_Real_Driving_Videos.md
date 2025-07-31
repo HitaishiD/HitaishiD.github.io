@@ -35,9 +35,8 @@ The preprocessed frames are passed through the model to generate segmentation ma
 Finally, the annotated frames are written to an output video using OpenCV, which allows for easy playback and comparison across different driving conditions.
 
 ### Results
-<span style="color: rgb(0, 0, 255);">Side by side GIFs for each scenario</span>
 
-1. Urban scenario
+Urban scenario
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
@@ -53,7 +52,7 @@ Finally, the annotated frames are written to an output video using OpenCV, which
 </div>
 
 
-2. Rural scenario 
+Rural scenario 
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
@@ -69,7 +68,7 @@ Finally, the annotated frames are written to an output video using OpenCV, which
 </div>
 
 
-3. Rain scenario 
+Rain scenario 
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
@@ -85,7 +84,7 @@ Finally, the annotated frames are written to an output video using OpenCV, which
 </div>
 
 
-4. Night scenario https://youtu.be/EbRHXdINw4g
+Night scenario https://youtu.be/EbRHXdINw4g
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
@@ -101,7 +100,7 @@ Finally, the annotated frames are written to an output video using OpenCV, which
 </div>
 
 
-5. Snow scenario 
+Snow scenario 
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
