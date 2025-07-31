@@ -54,7 +54,7 @@ The training process is summarized in the following sequence diagram.
 
 
 
-## Hyperparameter Finetuning
+## Hyperparameter Finetuning with Optuna
 
 Optuna is used for hyperparameter fine-tuning. It is an open-source hyperparameter optimization algorithm that is used to automate hyperparameter search [4]. It requires as input an upper bound and a lower bound for each hyperparameter and the number of trials. This method was chosen over conventional methods such as Grid Search or Random Search since Optuna dynamically adjusts its search strategy based on past trials and refines its search over time. On the other hand, Grid Search tests all combinations systematically, requiring large computing resources, and Random Search might take more time since arbitrary values for hyperparameters are chosen for each experiment. Optuna offers the option of stopping unpromising trials
 early using pruners. Its exploration-exploitation balance ensures a more broader, more efficient search. The
