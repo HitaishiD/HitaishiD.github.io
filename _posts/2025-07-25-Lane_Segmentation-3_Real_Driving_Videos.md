@@ -41,17 +41,17 @@ Finally, the annotated frames are written to an output video using OpenCV, which
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
-    <iframe src="https://www.youtube.com/embed/JfdFtId3ftE?autoplay=1&loop=1&playlist=VIDEO_ID_1&mute=1&controls=0&modestbranding=1&rel=0"
+    <iframe src="https://www.youtube.com/embed/JfdFtId3ftE?autoplay=1&loop=1&playlist=JfdFtId3ftE&mute=1&controls=0&modestbranding=1&rel=0"
             style="width: 100%; height: 100%;"
             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
-    <iframe src="https://www.youtube.com/embed/ptUX-Qoy_4g
-?autoplay=1&loop=1&playlist=VIDEO_ID_2&mute=1&controls=0&modestbranding=1&rel=0"
+    <iframe src="https://www.youtube.com/embed/ptUX-Qoy_4g?autoplay=1&loop=1&playlist=ptUX-Qoy_4g&mute=1&controls=0&modestbranding=1&rel=0"
             style="width: 100%; height: 100%;"
             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
+
 
 
 ## Analysis of model performance
