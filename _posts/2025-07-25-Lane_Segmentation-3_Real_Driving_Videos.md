@@ -53,6 +53,68 @@ Finally, the annotated frames are written to an output video using OpenCV, which
 </div>
 
 
+2. Rural scenario 
+
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/KK8SbAfiqBg?autoplay=1&loop=1&playlist=KK8SbAfiqBg&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/JabNbPih0m8?autoplay=1&loop=1&playlist=JabNbPih0m8&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+3. Rain scenario 
+
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/WM2NDPIasQY?autoplay=1&loop=1&playlist=WM2NDPIasQY&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/9kIS59TgEes?autoplay=1&loop=1&playlist=9kIS59TgEes&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+4. Night scenario https://youtu.be/EbRHXdINw4g
+
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/UA5Udtf7668?autoplay=1&loop=1&playlist=UA5Udtf7668&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/EbRHXdINw4g?autoplay=1&loop=1&playlist=EbRHXdINw4g&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+5. Snow scenario 
+
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/3bZ3VLXlB3o?autoplay=1&loop=1&playlist=3bZ3VLXlB3o&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
+    <iframe src="https://www.youtube.com/embed/GnsajjIjw1Y?autoplay=1&loop=1&playlist=GnsajjIjw1Y&mute=1&controls=0&modestbranding=1&rel=0"
+            style="width: 100%; height: 100%;"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
 
 ## Analysis of model performance
 * Where it worked and where it failed?
