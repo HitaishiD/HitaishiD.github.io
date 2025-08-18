@@ -8,9 +8,10 @@ category: Study-Buddy
 
 Students often encounter a range of frustrations related to their classes, be it at high school level or university level. frustrations related to the learning process itself are the most impactful and demotivating for students. The core learning-related frustrations are illustrated below. 
 
-<div style="text-align: center;">
-  <b>Main Problems faced by Students during their Learning Process</b>
+<div style="text-align: center; font-weight: bold;">
+  Main Problems faced by Students during their Learning Process
 </div>
+
 
 <div align="center">
   <img src="{{ site.baseurl }}/images/study-buddy/problems.png" alt="Learning-related problems faced by students">
