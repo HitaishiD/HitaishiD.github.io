@@ -84,7 +84,7 @@ Rain scenario
 </div>
 
 
-Night scenario https://youtu.be/EbRHXdINw4g
+Night scenario
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="flex: 1 1 45%; aspect-ratio: 16 / 9;">
