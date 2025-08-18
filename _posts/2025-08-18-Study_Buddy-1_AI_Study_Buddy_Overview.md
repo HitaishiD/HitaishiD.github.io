@@ -8,7 +8,7 @@ category: Study-Buddy
 
 Students often encounter a range of frustrations related to their classes, be it at high school level or university level. frustrations related to the learning process itself are the most impactful and demotivating for students. The core learning-related frustrations are illustrated below. 
 
-<div style="text-align: center;"> Main Problems faced by Students during their Learning Process </div>
+<div style="text-align: center;"> **Main Problems faced by Students during their Learning Process** </div>
 
 <div align="center">
   <img src="{{ site.baseurl }}/images/study-buddy/problems.png" alt="Learning-related problems faced by students">
@@ -16,6 +16,7 @@ Students often encounter a range of frustrations related to their classes, be it
 
 This presents an opportunity to use AI tools to solve these problems. The AI-powered Study Buddy developed in this project aims to address these pain points as illustrated below. 
 
+<div align="center">
   <img src="{{ site.baseurl }}/images/study-buddy/problems_solutions.png" alt="Learning-related problems and proposed solutions">
 </div>
 
